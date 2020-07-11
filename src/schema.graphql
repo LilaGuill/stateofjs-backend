@@ -1,0 +1,51 @@
+type Query {
+  info: String!
+  users: [User!]!
+  frameworks: [Framework!]!
+  rankings: [Ranking!]!
+  overviews: [Overview!]!
+}
+
+type User {
+  _id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+type Framework {
+  _id: ID!
+  stars: Int!
+  symbol: String!
+  name: String!
+  url: String
+}
+
+type Ranking {
+  _id: ID!
+  id: String!
+  awareness: [Data]
+  interest: [Data]
+  satisfaction: [Data]
+}
+
+type Data {
+  year: Int
+  rank: Int
+  percentage: String
+}
+
+type Overview {
+  _id: ID!
+  id: String!
+  buckets: [Bucket]
+}
+
+type Bucket {
+  id: String
+  count: Int
+  percentage: String
+}
+
+type Mutation {
+  create(firstName: String!, lastName: String!): User!
+}

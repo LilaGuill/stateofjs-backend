@@ -1,0 +1,26 @@
+{
+  "name": "graphql-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "jest": {
+    "preset": "@shelf/jest-mongodb"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shelf/jest-mongodb": "^1.1.5",
+    "graphql-yoga": "^1.18.3",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "jest-environment-node": "^26.0.1",
+    "nodemon": "^2.0.4"
+  }
+}
