@@ -4,6 +4,8 @@ type Query {
   frameworks: [Framework!]!
   rankings: [Ranking!]!
   overviews: [Overview!]!
+  usages: [Usage!]!
+  experiences: [Experiences!]!
 }
 
 type User {
@@ -45,7 +47,38 @@ type Bucket {
   count: Int
   percentage: String
 }
+type Usage {
+  average: String
+  total: Int
+  id: String
+  ranges: [Range]
+}
+type Range {
+  range: String
+  percentage: String
+  count: Int
+}
 
-type Mutation {
-  create(firstName: String!, lastName: String!): User!
+type Experiences {
+  id: String
+  data: [Experience]
+}
+
+type Experience {
+  year: Int
+  total: Int
+  completion: [Completion]
+  awarenessInterestSatisfaction: [AwarenessInterestSatisfaction]
+  buckets: [Bucket]
+}
+
+type Completion {
+  count: Int
+  percentage: Int
+}
+
+type AwarenessInterestSatisfaction {
+  awareness: Int
+  interest: Int
+  satisfaction: Int
 }

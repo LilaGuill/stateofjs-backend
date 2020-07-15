@@ -3,7 +3,8 @@ const mongoose = require("mongoose")
 const { getFrameworks } = require("./utils/frameworks")
 const { getRankings } = require("./utils/rankings")
 const { getOverviews } = require("./utils/overviews")
-
+const { getUsages } = require("./utils/usages")
+const { getExperiences } = require("./utils/experiences")
 //connection mongoose database
 mongoose.connect("mongodb://localhost/app", {
   useNewUrlParser: true,
@@ -17,8 +18,10 @@ const resolvers = {
     frameworks: () => getFrameworks(),
     rankings: () => getRankings(),
     overviews: () => getOverviews(),
+    usages: () => getUsages(),
+    experiences: () => getExperiences(),
   },
-  Mutation: {},
+  // Mutation: {},
 }
 
 const server = new GraphQLServer({
