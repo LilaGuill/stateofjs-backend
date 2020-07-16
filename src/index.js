@@ -19,7 +19,7 @@ const resolvers = {
     rankings: () => getRankings(),
     overviews: () => getOverviews(),
     usages: () => getUsages(),
-    experiences: () => getExperiences(),
+    experiences: (parents, args) => getExperiences(args),
   },
   // Mutation: {},
 }

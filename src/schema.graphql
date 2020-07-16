@@ -5,7 +5,7 @@ type Query {
   rankings: [Ranking!]!
   overviews: [Overview!]!
   usages: [Usage!]!
-  experiences: [Experiences!]!
+  experiences(id: String!): [Experiences!]!
 }
 
 type User {
