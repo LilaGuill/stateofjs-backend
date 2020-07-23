@@ -1,10 +1,11 @@
 const { GraphQLServer } = require("graphql-yoga") // initialise le serveur
 const mongoose = require("mongoose")
-const { getFrameworks } = require("./utils/frameworks")
-const { getRankings } = require("./utils/rankings")
-const { getOverviews } = require("./utils/overviews")
-const { getUsages } = require("./utils/usages")
-const { getExperiences } = require("./utils/experiences")
+const { getFrameworks } = require("./queries/frameworks")
+const { getRankings } = require("./queries/rankings")
+const { getOverviews } = require("./queries/overviews")
+const { getUsages } = require("./queries/usages")
+const { getExperiences } = require("./queries/experiences")
+
 //connection mongoose database
 mongoose.connect("mongodb://localhost/app", {
   useNewUrlParser: true,
@@ -25,7 +26,7 @@ const resolvers = {
 }
 
 const server = new GraphQLServer({
-  typeDefs: "./src/schema.graphql",
+  typeDefs: "./src/schema/schema.graphql",
   resolvers,
 })
 server.start(() => {
