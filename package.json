@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@shelf/jest-mongodb": "^1.1.5",
+    "dotenv": "^8.2.0",
     "graphql-yoga": "^1.18.3",
     "mongoose": "^5.9.16"
   },
