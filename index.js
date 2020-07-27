@@ -28,7 +28,6 @@ const resolvers = {
 }
 
 const server = new GraphQLServer({
-  cors: true,
   typeDefs: "./schema/schema.graphql",
   resolvers,
 })
