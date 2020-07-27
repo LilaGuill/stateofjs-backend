@@ -28,16 +28,17 @@ const resolvers = {
 }
 
 const server = new GraphQLServer({
+  cors: false,
   typeDefs: "./schema/schema.graphql",
   resolvers,
 })
 
-// const opts = {
-//   cors: {
-//     credentials: true,
-//     origin: ["http://localhost:3000/"], // your frontend url.
-//   },
-// }
+const opts = {
+  cors: {
+    credentials: true,
+    origin: ["http://localhost:3000/"], // your frontend url.
+  },
+}
 server.start(() => {
   console.log("server started")
 })
