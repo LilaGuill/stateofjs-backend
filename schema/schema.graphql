@@ -1,17 +1,9 @@
 type Query {
-  info: String!
-  users: [User!]!
   frameworks: [Framework!]!
   rankings: [Ranking!]!
   overviews: [Overview!]!
   usages: [Usage!]!
   experiences(id: String!): [Experiences!]!
-}
-
-type User {
-  _id: ID!
-  firstName: String!
-  lastName: String!
 }
 
 type Framework {
