@@ -32,12 +32,12 @@ const server = new GraphQLServer({
   resolvers,
 })
 
-const opts = {
-  cors: {
-    credentials: true,
-    origin: ["http://localhost:3000/"], // your frontend url.
-  },
-}
-server.start(opts, () => {
+// const opts = {
+//   cors: {
+//     credentials: true,
+//     origin: ["http://localhost:3000/"], // your frontend url.
+//   },
+// }
+server.start(() => {
   console.log("server started")
 })
