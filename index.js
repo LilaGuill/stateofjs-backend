@@ -36,7 +36,10 @@ const opts = {
   port: process.env.PORT,
   cors: {
     credentials: true,
-    origin: "http://localhost:3000", // your frontend url.
+    origin: [
+      "http://localhost:3000",
+      "https://gracious-wozniak-795873.netlify.app",
+    ], // your frontend url.
   },
 }
 
