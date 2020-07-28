@@ -35,7 +35,7 @@ const server = new GraphQLServer({
 const opts = {
   port: 4000,
   cors: {
-    origin: "*", // your frontend url.
+    origin: ["http://localhost:3000/"], // your frontend url.
     credentials: true,
   },
 }
