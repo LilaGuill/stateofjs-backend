@@ -1,6 +1,6 @@
 const Experience = require("../models/Experience")
 
-//get all frameworks from database
+//get all experiences from database
 const getExperiences = async (args) => {
   const experiences = await Experience.find({ id: args.id })
   return experiences

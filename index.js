@@ -1,6 +1,5 @@
 const { GraphQLServer } = require("graphql-yoga") // initialise le serveur
 const mongoose = require("mongoose")
-
 const { getFrameworks } = require("./queries/frameworks")
 const { getRankings } = require("./queries/rankings")
 const { getOverviews } = require("./queries/overviews")
@@ -36,10 +35,7 @@ const opts = {
   port: process.env.PORT,
   cors: {
     credentials: true,
-    origin: [
-      "http://localhost:3000",
-      "https://gracious-wozniak-795873.netlify.app",
-    ], // your frontend url.
+    origin: ["http://localhost:3000", "https://stateofjs-clone.netlify.app/"], // your frontend url.
   },
 }
 
