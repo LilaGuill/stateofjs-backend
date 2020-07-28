@@ -35,7 +35,7 @@ const opts = {
   port: process.env.PORT,
   cors: {
     credentials: true,
-    origin: ["http://localhost:3000", "https://stateofjs-clone.netlify.app/"], // your frontend url.
+    origin: ["http://localhost:3000", "https://stateofjs-clone.netlify.app"], // your frontend url.
   },
 }
 
