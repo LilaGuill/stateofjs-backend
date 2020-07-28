@@ -33,7 +33,7 @@ const server = new GraphQLServer({
 })
 
 const opts = {
-  port: process.env.MONGODB_URI,
+  port: process.env.PORT,
   cors: {
     origin: ["http://localhost:3000/"], // your frontend url.
     credentials: true,
